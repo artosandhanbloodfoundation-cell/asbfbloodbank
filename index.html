@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>আর্ত-সন্ধান ব্লাড ফাউন্ডেশন</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Hind Siliguri', sans-serif;
+    text-align: center;
+}
+/* Top Section */
+.top-section {
+    background: red; /* লাল */
+    height: 33vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* বড় ও বোল্ড নাম */
+.foundation-name {
+    font-size: 55px;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* বড় ও গাঢ় ওয়াটারমার্ক */
+.watermark {
+    position: absolute;
+    font-size: 40px; 
+    font-weight: bold;
+    color: rgba(255,255,255,0.35); /* আগের চেয়ে গাঢ় */
+    animation: bounce 4s infinite;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Logo নিচের মাঝখানে */
+.logo {
+    width: 130px;
+    position: absolute;
+    bottom: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 6px solid white;
+}
+
+/* Bottom Section */
+.bottom-section {
+    padding-top: 100px;
+}
+
+.slogan {
+    margin-top: 20px;
+    font-weight: bold;
+    color: red;
+    font-size: 18px;
+}
+
+button {
+    padding: 14px 28px;
+    margin: 12px;
+    font-size: 17px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.request-btn {
+    background: red;
+    color: white;
+}
+
+.donor-btn {
+    background: green;
+    color: white;
+}
+
+.notification {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 3px 7px;
+}
+/* Responsive Fix */
+@media (max-width: 768px) {
+
+    .top-section {
+        height: 40vh;
+        padding: 10px;
+    }
+
+    .foundation-name {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .watermark {
+        font-size: 22px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .logo {
+        width: 90px;
+        bottom: -45px;
+    }
+
+    .bottom-section {
+        padding-top: 70px;
+    }
+
+    .slogan {
+        font-size: 16px;
+    }
+
+    button {
+        width: 80%;
+        font-size: 16px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="notification" onclick="alert('নোটিফিকেশন সিস্টেম পরে যুক্ত হবে 🔔')"> 
+🔔 <span id="badge" class="badge" style="display:none;">0</span>
+</div>
+
+<div class="top-section">
+    <div class="foundation-name">আর্ত-সন্ধান ব্লাড ফাউন্ডেশন</div>
+    <div class="watermark">
+      দুনিয়াতে করা ভালো কাজগুলোই </br> 
+     আপনার আখিরাতকে সাজিয়ে দিবে
+    </div>
+
+    <img src="logo.png" class="logo">
+</div>
+
+<div class="bottom-section">
+    <div class="slogan">মানবতার টানে , ভয় নেই রক্তদানে</div>
+
+    <br><br>
+
+    <button class="request-btn" onclick="alert('রক্ত প্রয়োজন ফর্ম পরে যুক্ত হবে')">
+        🩸 রক্ত প্রয়োজন
+    </button>
+
+    <button class="donor-btn" onclick="alert('ডোনার সাইন ইন পরে যুক্ত হবে')">
+        ❤️ ডোনার হোন
+    </button>
+</div>
+
+</body>
+</html>
